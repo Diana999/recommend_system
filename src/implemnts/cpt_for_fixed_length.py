@@ -5,6 +5,7 @@ from sklearn.preprocessing import LabelEncoder
 from tqdm import tqdm
 
 from algos.cpt import CPT
+from algos.cpt_improved import CPTImproved
 from src.build_data.make_target import split_list_of_seq_into_test_and_target
 from src.build_data.split_data import split_data_to_train_test, split_file_into_n_files
 
@@ -12,16 +13,16 @@ from src.build_data.split_data import split_data_to_train_test, split_file_into_
 class CPTWorkFixed:
     def __init__(self, file, len_of_sequence):
         self.sequences = []
-        self.make_files()
-        self.read_file(file,len_of_sequence)
+        # self.make_files()
+        self.read_file(file, len_of_sequence)
         self.encode_data()
-        #self.predict(len_of_tail)
+        # self.predict(len_of_tail)
 
     def make_files(self):
         print('making files')
-        split_file_into_n_files('data/data_with_len_more_2.txt', 25)
+        split_file_into_n_files('data/data_with_len_more_2.txt', 1)
 
-    def read_file(self, file,len_of_sequence):
+    def read_file(self, file, len_of_sequence):
         with open(file, 'r') as f:
             print("Reading...")
             for line in tqdm(f.readlines()):
@@ -50,9 +51,10 @@ class CPTWorkFixed:
             for i in train_seq:
                 wr.writerow(i)
         print("Prediction...")
-        model = CPT()
-        model.train(train_seq+test_seq)
-        predictions, ttl = model.predict(train_seq + test_seq, test_seq, n, 1)
+        model = CPTImproved(train_seq+test_seq,test_seq)
+        #train, test = model.load_files('data/train.csv', 'data/test.csv')
+        model.train()
+        predictions, ttl = model.predict(test_seq, n)#, test, n)
         counter_good = 0
         with open('data/show.txt', 'w') as f:
             for i in range(len(predictions)):

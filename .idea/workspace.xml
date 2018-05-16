@@ -1,7 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1b37966f-ad8d-4c73-b1b5-3d8683079a4e" name="Default" comment="" />
+    <list default="true" id="1b37966f-ad8d-4c73-b1b5-3d8683079a4e" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/src/algos/cpt_original.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/build_data/encode_data.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/implemnts/cpt_original.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/analytics/tail_len.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/analytics/tail_len.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/10_part.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/11_part.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/12_part.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/13_part.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/14_part.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/15_part.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/16_part.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/17_part.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/18_part.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/19_part.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/1_part.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/1_part.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/20_part.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/21_part.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/22_part.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/23_part.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/24_part.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/25_part.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/2_part.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/3_part.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/4_part.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/5_part.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/6_part.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/7_part.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/8_part.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/9_part.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/show.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/show.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/tail_len_analytics.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/tail_len_analytics.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/test.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/test.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/train.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/train.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/implemnts/cpt_for_fixed_length.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/implemnts/cpt_for_fixed_length.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.py" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -11,88 +48,41 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="cpt.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/algos/cpt.py">
+      <file leaf-file-name="encode_data.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/build_data/encode_data.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="359">
-              <caret line="62" column="34" selection-start-line="62" selection-start-column="34" selection-end-line="62" selection-end-column="34" />
-              <folding>
-                <element signature="e#0#19#0" expanded="true" />
-              </folding>
+            <state>
+              <caret column="16" selection-start-column="16" selection-end-column="16" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="cpt_implement.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/implemnts/cpt_implement.py">
+      <file leaf-file-name="everything.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/directory_test/everything.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="16">
-              <caret line="20" column="67" selection-start-line="20" selection-start-column="67" selection-end-line="20" selection-end-column="67" />
-              <folding>
-                <element signature="e#0#16#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="43">
+              <caret line="135" column="8" selection-start-line="135" selection-start-column="8" selection-end-line="135" selection-end-column="8" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="cpt_improved.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/algos/cpt_improved.py">
+      <file leaf-file-name="cpt_original.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/algos/cpt_original.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
-              <folding>
-                <element signature="e#0#21#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="cpt_for_fixed_length.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/implemnts/cpt_for_fixed_length.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="237">
-              <caret line="53" column="38" selection-start-line="53" selection-start-column="38" selection-end-line="53" selection-end-column="38" />
+            <state relative-caret-position="504">
+              <caret line="114" column="39" selection-start-line="114" selection-start-column="39" selection-end-line="114" selection-end-column="39" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
-                <element signature="e#882#1164#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="test_draw.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/analytics/test_draw.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="6" selection-start-line="6" selection-end-line="6" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="tail_len.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/analytics/tail_len.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="8" column="44" selection-start-line="8" selection-start-column="44" selection-end-line="8" selection-end-column="44" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="tail_len_analytics.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/data/tail_len_analytics.txt">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file leaf-file-name="data_with_len_more_2.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/data/data_with_len_more_2.txt">
-          <provider selected="true" editor-type-id="LargeFileEditor" />
-        </entry>
-      </file>
-      <file leaf-file-name="main.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="main.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="3" column="14" selection-start-line="3" selection-start-column="14" selection-end-line="3" selection-end-column="14" />
+            <state relative-caret-position="165">
+              <caret line="11" column="76" selection-start-line="11" selection-start-column="76" selection-end-line="11" selection-end-column="76" />
               <folding>
                 <element signature="e#0#43#0" expanded="true" />
               </folding>
@@ -100,11 +90,43 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="show.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/data/show.txt">
+      <file leaf-file-name="cpt_original.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/implemnts/cpt_original.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-506">
-              <caret line="1" column="6" selection-start-line="1" selection-start-column="6" selection-end-line="1" selection-end-column="6" />
+            <state relative-caret-position="418">
+              <caret line="43" selection-start-line="43" selection-end-line="43" />
+              <folding>
+                <element signature="e#0#10#0" expanded="true" />
+                <marker date="1526464539000" expanded="true" signature="1445:1447" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="split_data.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/build_data/split_data.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="315">
+              <caret line="21" selection-start-line="21" selection-end-line="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="test.csv" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/data/test.csv">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file leaf-file-name="train.csv" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/data/train.csv">
+          <provider selected="true" editor-type-id="LargeFileEditor" />
+        </entry>
+      </file>
+      <file leaf-file-name="train.csv" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/directory_test/train.csv">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1042980">
+              <caret line="69532" column="77" selection-start-line="69532" selection-start-column="77" selection-end-line="69532" selection-end-column="77" />
             </state>
           </provider>
         </entry>
@@ -129,7 +151,13 @@
       <find>each_target</find>
       <find>1788</find>
       <find>data</find>
+      <find>seqid</find>
+      <find>alphabet</find>
+      <find>Item</find>
     </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -158,11 +186,20 @@
         <option value="$PROJECT_DIR$/src/algos/cpt_improved.py" />
         <option value="$PROJECT_DIR$/src/Plan/docs.txt" />
         <option value="$PROJECT_DIR$/src/analytics/test_draw.py" />
-        <option value="$PROJECT_DIR$/src/main.py" />
         <option value="$PROJECT_DIR$/src/implemnts/cpt_implement.py" />
         <option value="$PROJECT_DIR$/src/algos/cpt.py" />
         <option value="$PROJECT_DIR$/src/implemnts/cpt_for_fixed_length.py" />
+        <option value="$PROJECT_DIR$/src/algos/cpt_original.py" />
+        <option value="$PROJECT_DIR$/src/data/show.txt" />
+        <option value="$PROJECT_DIR$/src/data/train.csv" />
+        <option value="$PROJECT_DIR$/src/data/test.csv" />
         <option value="$PROJECT_DIR$/src/analytics/tail_len.py" />
+        <option value="$PROJECT_DIR$/src/directory_test/test.csv" />
+        <option value="$PROJECT_DIR$/src/directory_test/train.csv" />
+        <option value="$PROJECT_DIR$/src/build_data/encode_data.py" />
+        <option value="$PROJECT_DIR$/src/directory_test/everything.py" />
+        <option value="$PROJECT_DIR$/src/implemnts/cpt_original.py" />
+        <option value="$PROJECT_DIR$/src/main.py" />
       </list>
     </option>
   </component>
@@ -170,6 +207,7 @@
     <option name="width" value="1440" />
     <option name="height" value="900" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
@@ -197,12 +235,6 @@
               <item name="untitled3" type="b2602c69:ProjectViewProjectNode" />
               <item name="untitled3" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="analytics" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="untitled3" type="b2602c69:ProjectViewProjectNode" />
-              <item name="untitled3" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="build_data" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -210,6 +242,12 @@
               <item name="untitled3" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="data" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="untitled3" type="b2602c69:ProjectViewProjectNode" />
+              <item name="untitled3" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="directory_test" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="untitled3" type="b2602c69:ProjectViewProjectNode" />
@@ -363,14 +401,13 @@
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18958333" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32900944" />
-      <window_info anchor="bottom" id="Version Control" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info anchor="bottom" id="Python Console" order="7" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32900944" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32900944" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.3466981" />
       <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.39976415" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.379717" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -378,23 +415,24 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32900944" />
     </layout>
     <layout-to-restore>
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18958333" />
-      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18958333" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32900944" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="right" id="Data View" order="3" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Version Control" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.1509434" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32900944" />
+      <window_info anchor="bottom" id="Debug" order="3" visible="true" weight="0.45165095" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.3466981" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Python Console" order="7" />
@@ -405,6 +443,23 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/src/algos/cpt_improved.py</url>
+          <line>90</line>
+          <option name="timeStamp" value="12" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/src/implemnts/cpt_original.py</url>
+          <line>59</line>
+          <option name="timeStamp" value="23" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/src/main.py</url>
+          <line>21</line>
+          <option name="timeStamp" value="30" />
+        </line-breakpoint>
+      </breakpoints>
       <default-breakpoints>
         <breakpoint type="python-exception">
           <properties notifyOnTerminate="true" exception="BaseException">
@@ -412,55 +467,53 @@
           </properties>
         </breakpoint>
       </default-breakpoints>
-      <option name="time" value="12" />
+      <option name="time" value="37" />
     </breakpoint-manager>
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="evaluateCodeFragment">
       <expression>
-        <expression-string>test_seq[0]</expression-string>
+        <expression-string>len([i for i in predictions if i])/len(predictions)</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>test_seq[0], self.target_test_seq[0]</expression-string>
+        <expression-string>[i for i, v in zip(range(len(sequence) - 1, 0, -1), reversed(sequence)) if v == each_target[-1]]</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>array[0][0]</expression-string>
+        <expression-string>[i for i, v in zip(range(len(sequence) - 1, 0, -1), reversed(sequence)) if v == each_target[-1]],</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>array[0]</expression-string>
+        <expression-string>index = [i for i, v in zip(range(len(sequence) - 1, 0, -1), reversed(sequence)) if v == each_target[-1]], sequence</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>False in [True if len(i) &gt; 1 else False for i in array]</expression-string>
+        <expression-string>index = [i for i, v in zip(range(len(sequence) - 1, 0, -1), reversed(sequence)) if v == each_target[-1]]</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>for i in array:
-    if len(i) &lt; 1:
-        print(1)</expression-string>
+        <expression-string>len([predictions[i] for i in range(len(predictions)) if i and len(test[i]) &gt; 19])/len(predictions)</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>len(array[1])</expression-string>
+        <expression-string>len([predictions[i] for i in range(len(predictions)) if i and len(test[i]) &gt; 9])/len(predictions)</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>len(array[0])</expression-string>
+        <expression-string>len([predictions[i] for i in range(len(predictions)) if i and len(test[i]) &gt; 7])/len(predictions)</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>len(array)</expression-string>
+        <expression-string>len(test[1])</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
       </expression>
@@ -514,66 +567,27 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Plan/docs.txt">
+    <entry file="file://$PROJECT_DIR$/src/data/test.csv">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/data/train.csv">
+      <provider selected="true" editor-type-id="LargeFileEditor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/directory_test/train.csv">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="85" selection-start-line="4" selection-start-column="85" selection-end-line="4" selection-end-column="85" />
+        <state relative-caret-position="1042980">
+          <caret line="69532" column="77" selection-start-line="69532" selection-start-column="77" selection-end-line="69532" selection-end-column="77" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/build_data/process_df.py">
+    <entry file="file://$PROJECT_DIR$/src/implemnts/cpt_original.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="16" selection-start-line="16" selection-end-line="18" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/build_data/make_target.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" selection-start-line="15" selection-end-line="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/implemnts/cpt_implement.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="24" selection-start-line="4" selection-start-column="24" selection-end-line="4" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/build_data/delete_shorts.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="24" selection-start-line="12" selection-start-column="24" selection-end-line="12" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/build_data/split_data.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" selection-start-line="15" selection-end-line="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/algos/cpt.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="10" selection-start-line="10" selection-end-line="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Plan/docs.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="85" selection-start-line="4" selection-start-column="85" selection-end-line="4" selection-end-column="85" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/build_data/process_df.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="16" selection-start-line="16" selection-end-line="18" selection-end-column="54" />
+        <state relative-caret-position="75">
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+            <marker date="1526464539000" expanded="true" signature="1445:1447" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -647,13 +661,7 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/implemnts/.ipynb_checkpoints/cpt_implement-checkpoint.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/build_data/delete_shorts.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -663,13 +671,7 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/build_data/process_df.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#19#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/one/one.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -699,53 +701,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/build_data/split_data.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="16" selection-start-line="8" selection-start-column="16" selection-end-line="8" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/data/1_part.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-4337" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/structures/prediction_tree.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" selection-start-line="18" selection-end-line="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/build_data/make_target.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="4" selection-start-line="13" selection-start-column="4" selection-end-line="13" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/data/test.csv">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$USER_HOME$/venv/lib/python3.6/site-packages/pandas/core/series.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="397" selection-start-line="397" selection-end-line="397" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/venv/lib/python3.6/site-packages/pandas/core/frame.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="161">
           <caret line="744" selection-start-line="744" selection-end-line="744" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/data/train.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1185">
-          <caret line="1124" selection-start-line="1124" selection-end-line="1124" />
         </state>
       </provider>
     </entry>
@@ -763,25 +722,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/data/show.txt">
+    <entry file="file://$PROJECT_DIR$/src/algos/cpt.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-506">
-          <caret line="1" column="6" selection-start-line="1" selection-start-column="6" selection-end-line="1" selection-end-column="6" />
+        <state relative-caret-position="-872">
+          <caret line="12" column="8" selection-start-line="12" selection-start-column="8" selection-end-line="12" selection-end-column="8" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main.py">
+    <entry file="file://$PROJECT_DIR$/src/algos/cpt_improved.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="14" selection-start-line="3" selection-start-column="14" selection-end-line="3" selection-end-column="14" />
+        <state relative-caret-position="1380">
+          <caret line="92" selection-start-line="92" selection-end-line="92" />
           <folding>
-            <element signature="e#0#43#0" expanded="true" />
+            <element signature="e#0#21#0" expanded="true" />
           </folding>
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/data/data_with_len_more_2.txt">
-      <provider selected="true" editor-type-id="LargeFileEditor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/analytics/test_draw.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -790,54 +746,143 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$USER_HOME$/venv/lib/python3.6/site-packages/pandas/core/series.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="397" selection-start-line="397" selection-end-line="397" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/structures/prediction_tree.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="18" selection-start-line="18" selection-end-line="18" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/implemnts/cpt_implement.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="16">
-          <caret line="20" column="67" selection-start-line="20" selection-start-column="67" selection-end-line="20" selection-end-column="67" />
-          <folding>
-            <element signature="e#0#16#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/algos/cpt.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="359">
-          <caret line="62" column="34" selection-start-line="62" selection-start-column="34" selection-end-line="62" selection-end-column="34" />
-          <folding>
-            <element signature="e#0#19#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/algos/cpt_improved.py">
-      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
-          <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
-          <folding>
-            <element signature="e#0#21#0" expanded="true" />
-          </folding>
+          <caret line="20" column="67" selection-start-line="20" selection-start-column="67" selection-end-line="20" selection-end-column="67" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/implemnts/cpt_for_fixed_length.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="237">
-          <caret line="53" column="38" selection-start-line="53" selection-start-column="38" selection-end-line="53" selection-end-column="38" />
+        <state relative-caret-position="117">
+          <caret line="47" column="30" lean-forward="true" selection-start-line="47" selection-start-column="30" selection-end-line="47" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/build_data/make_target.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="4" selection-start-line="13" selection-start-column="4" selection-end-line="13" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/venv/lib/python3.6/site-packages/sklearn/preprocessing/label.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="146">
+          <caret line="94" selection-start-line="94" selection-end-line="94" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/analytics/tail_len.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" selection-start-line="12" selection-end-line="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/directory_test/test.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="487">
+          <caret line="39732" column="59" selection-start-line="39732" selection-start-column="59" selection-end-line="39732" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/directory_test/train.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1042980">
+          <caret line="69532" column="77" selection-start-line="69532" selection-start-column="77" selection-end-line="69532" selection-end-column="77" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/data/test.csv">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/data/train.csv">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="-5754">
+          <caret line="277" column="13" selection-start-line="277" selection-start-column="13" selection-end-line="277" selection-end-column="13" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="LargeFileEditor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/build_data/encode_data.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="16" selection-start-column="16" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/venv/lib/python3.6/codecs.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="159">
+          <caret line="310" selection-start-line="310" selection-end-line="310" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/venv/lib/python3.6/site-packages/tqdm/_tqdm.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="9555">
+          <caret line="637" column="8" selection-start-line="637" selection-start-column="8" selection-end-line="637" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/algos/cpt_original.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="504">
+          <caret line="114" column="39" selection-start-line="114" selection-start-column="39" selection-end-line="114" selection-end-column="39" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
-            <element signature="e#882#1164#0" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/data/tail_len_analytics.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/analytics/tail_len.py">
+    <entry file="file://$PROJECT_DIR$/src/directory_test/everything.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="44" selection-start-line="8" selection-start-column="44" selection-end-line="8" selection-end-column="44" />
+        <state relative-caret-position="43">
+          <caret line="135" column="8" selection-start-line="135" selection-start-column="8" selection-end-line="135" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/build_data/split_data.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" selection-start-line="21" selection-end-line="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/implemnts/cpt_original.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="43" selection-start-line="43" selection-end-line="43" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+            <marker date="1526464539000" expanded="true" signature="1445:1447" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="76" selection-start-line="11" selection-start-column="76" selection-end-line="11" selection-end-column="76" />
+          <folding>
+            <element signature="e#0#43#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

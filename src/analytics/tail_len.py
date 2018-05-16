@@ -1,9 +1,12 @@
+from tqdm import tqdm
+
 from implemnts.cpt_for_fixed_length import CPTWorkFixed
+from implemnts.cpt_original import CPTOriginalWork
 
 
 def do_analytics():
-    smth = CPTWorkFixed('data/1_part.txt',15)
+    smth = CPTOriginalWork('data/data_with_len_more_2.txt', 20)
     with open('data/tail_len_analytics.txt', 'w') as f:
-        for tail in range(2, 11):
-            t = smth.predict(tail)
-            f.write(str(tail) + ' ' + str(15) + ' ' + str(t) + '\n')
+        for tail in tqdm(range(5,6)):
+            smth.predict(tail)
+            #f.write(str(tail) + ' ' + str(7) + ' ' + str(smth.predict(tail)) + '\n')
