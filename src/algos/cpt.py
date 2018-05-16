@@ -1,3 +1,5 @@
+from collections import Counter
+
 import pandas as pd
 from tqdm import tqdm
 
@@ -96,15 +98,17 @@ class CPT:
         ttl = []
         for each_target in tqdm(target):
             ttl.append(each_target)
-            each_target = each_target[-1:]
+            each_target = each_target[-2:]
             intersection = set(range(0, len(data)))
-
+            tries = []
             for element in each_target:
                 if self.II.get(element) is None:
                     continue
                 intersection = intersection & self.II.get(element)
-
+                tries+=list(self.II.get(element))
             similar_sequences = []
+            #intersection = [i[0] for i in Counter(tries).most_common(int(len(tries)))] if len(tries) > 1 else tries
+            intersection =  tries
 
             for element in intersection:
                 currentnode = self.LT.get(element)

@@ -8,7 +8,7 @@ import numpy as np
 
 # CPTOriginalWork('data/1_part.txt', 15)
 with open('different_analytics.txt', 'w') as f:
-    target = CPTOriginalWork('data/1_part.txt', 7, 50000)
+    target = CPTOriginalWork('data/1_part.txt', 15, 50000)
     target_test_seq, test_seq, train_seq = target.predict()
     model = CPT()
     print("init")
@@ -17,7 +17,7 @@ with open('different_analytics.txt', 'w') as f:
     model.train(test_seq)
     print('train')
 
-    predictions, nons = model.predict(train_seq, test_seq, 5, 3)
+    predictions, nons = model.predict(train_seq, test_seq, 5, 5)
     supra = 0
     for ia in range(len(target_test_seq)):
         if predictions[ia] and target_test_seq[ia][0] in predictions[ia]:
