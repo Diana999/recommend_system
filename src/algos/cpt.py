@@ -74,7 +74,7 @@ class CPT:
         """
         weight_level = 1 / number_of_similar_sequences
         weight_distance = 1 / number_items_counttable
-        score = 1 + weight_level + weight_distance * 0.001
+        score = 1 + weight_level * 5.5 + weight_distance * 1.5
 
         if counttable.get(key) is None:
             counttable[key] = score
@@ -83,7 +83,7 @@ class CPT:
 
         return counttable
 
-    def predict(self, data, target, k, n=1):
+    def predict(self, data, target, k, n):
         """
         Here target is the test dataset in the form of list of list,
         k is the number of last elements that will be used to find similar sequences and,
@@ -96,7 +96,7 @@ class CPT:
         ttl = []
         for each_target in tqdm(target):
             ttl.append(each_target)
-            each_target = each_target[-k:]
+            each_target = each_target[-1:]
             intersection = set(range(0, len(data)))
 
             for element in each_target:

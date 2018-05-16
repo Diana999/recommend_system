@@ -10,24 +10,22 @@ from build_data.split_data import split_data_to_train_test, split_file_into_n_fi
 
 
 class CPTOriginalWork:
-    def __init__(self, file):
+    def __init__(self, file, length, amount):
         self.sequences = []
         # self.make_files()
-        self.read_file(file)
-        #self.encode_data()
-
-
+        self.read_file(file, length, amount)
+        # self.encode_data()
 
     def make_files(self):
         print('making files')
         split_file_into_n_files('data/whole_data.txt', 1)
 
-    def read_file(self, file):
+    def read_file(self, file, length, amount):
         with open('data/whole_data.txt', 'r') as f:
             print("Reading...")
             k = 0
             for line in tqdm(f.readlines()):
-                if len(line.split()) > 13 and k < 57000:
+                if len(line.split()) > length and k < amount:
                     self.sequences.append(line.split())
                     k += 1
 
@@ -43,16 +41,16 @@ class CPTOriginalWork:
         print('we')
         train_seq, test_seq_begin = split_data_to_train_test(self.sequences, 0.9)
         test_seq, self.target_test_seq = split_list_of_seq_into_test_and_target(test_seq_begin)
-        with open('data/test.csv', 'w') as myfile:
-            wr = csv.writer(myfile, quoting=csv.QUOTE_NONE)
-            for i in test_seq:
-                wr.writerow(i)
-        with open('data/train.csv', 'w') as myfile:
-            wr = csv.writer(myfile, quoting=csv.QUOTE_NONE)
-            for i in train_seq:
-                wr.writerow(i)
-        print("Prediction...")
-        return self.target_test_seq
+        # with open('data/test.csv', 'w') as myfile:
+        #     wr = csv.writer(myfile, quoting=csv.QUOTE_NONE)
+        #     for i in test_seq:
+        #         wr.writerow(i)
+        # with open('data/train.csv', 'w') as myfile:
+        #     wr = csv.writer(myfile, quoting=csv.QUOTE_NONE)
+        #     for i in train_seq:
+        #         wr.writerow(i)
+        # print("Prediction...")
+        return self.target_test_seq, test_seq, train_seq
         # model = CPTOriginal()
         # train, test = model.load_files("data/train.csv", "data/test.csv", merge=True)
         # model.train(train)

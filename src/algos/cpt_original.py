@@ -20,14 +20,6 @@ class CPTOriginal():
 
     def load_files(self, train_file, test_file, merge=False):
 
-        """
-        This function reads in the wide csv file of sequences separated by commas and returns a list of list of those
-        sequences. The sequences are defined as below.
-        seq1 = A,B,C,D
-        seq2  B,C,E
-        Returns: [[A,B,C,D],[B,C,E]]
-        """
-
         train = []  # List of list containing the entire sequence data using which the model will be trained.
         test = []  # List of list containing the test sequences whose next n items are to be predicted
 
@@ -47,12 +39,6 @@ class CPTOriginal():
         return train, test
 
     def train(self, train):
-
-        """
-        This functions populates the Prediction Tree, Inverted Index and LookUp Table for the algorithm.
-        Input: The list of list training data
-        Output : Boolean True
-        """
 
         cursornode = self.root
 
@@ -79,12 +65,6 @@ class CPTOriginal():
 
     def score(self, counttable, key, length, target_size, number_of_similar_sequences, number_items_counttable):
 
-        """
-        This function is the main workhorse and calculates the score to be populated against an item. Items are predicted
-        using this score.
-        Output: Returns a counttable dictionary which stores the score against items. This counttable is specific for a
-        particular row or a sequence and therefore re-calculated at each prediction.
-        """
 
         weight_level = 1 / number_of_similar_sequences
         weight_distance = 1 / number_items_counttable
@@ -98,13 +78,6 @@ class CPTOriginal():
         return counttable
 
     def predict(self, train, test, k, n=1):
-        """
-        Here target is the test dataset in the form of list of list,
-        k is the number of last elements that will be used to find similar sequences and,
-        n is the number of predictions required.
-        Input: training list of list, target list of list, k,n
-        Output: max n predictions for each sequence
-        """
 
         predictions = []
         ttl = []
@@ -154,8 +127,5 @@ class CPTOriginal():
 
     def get_n_largest(self, dictionary, n):
 
-        """
-        A small utility to obtain top n keys of a Dictionary based on their values.
-        """
         largest = sorted(dictionary.items(), key=lambda t: t[1], reverse=True)[:n]
         return [key for key, _ in largest]
