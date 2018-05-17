@@ -4,24 +4,28 @@ from build_data.make_target import split_list_of_seq_into_test_and_target
 from build_data.split_data import split_data_to_train_test, split_file_into_n_files
 
 
-class CPTOriginalWork:
-    def __init__(self, file, length, amount):
+class CPTMakeData:
+    def __init__(self, file, length_of_seq_fixed=None, len_of_seq=None, num_of_seq=None):
+        self.length_of_seq_fixed = length_of_seq_fixed
+        self.len_of_seq = len_of_seq
+        self.num_of_seq = num_of_seq
         self.sequences = []
-        # self.make_files()
-        self.read_file(file, length, amount)
+        self.read_file(file)
 
     def make_files(self):
         print('making files')
         split_file_into_n_files('data/whole_data.txt', 1)
 
-    def read_file(self, file, length, amount):
+    def read_file(self, file):
         with open('data/whole_data.txt', 'r') as f:
-            print("Reading...")
-            k = 0
             for line in tqdm(f.readlines()):
-                if len(line.split()) > length and k < amount:
-                    self.sequences.append(line.split())
-                    k += 1
+                self.sequences.append(line.split())
+        if self.len_of_seq:
+            self.sequences = [seq for seq in self.sequences if len(seq) > self.len_of_seq]
+        elif self.length_of_seq_fixed:
+            self.sequences = [seq for seq in self.sequences if len(seq) == self.length_of_seq_fixed]
+        if self.num_of_seq:
+            self.sequences = self.sequences[:self.num_of_seq]
 
     def make_sequences(self):
         print('we')
