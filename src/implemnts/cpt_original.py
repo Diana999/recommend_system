@@ -1,7 +1,7 @@
 from tqdm import tqdm
 
-from build_data.make_target import split_list_of_seq_into_test_and_target
-from build_data.split_data import split_data_to_train_test, split_file_into_n_files
+
+
 
 
 class CPTMakeData:
