@@ -20,7 +20,7 @@ class BuildNeuralLSTM():
         self.batch_size = batch_size
         self.epochs = epochs
 
-    def _make_data(self):
+    def make_data(self):
         smth = MakeData(len_of_seq_fixed=6, num_of_seq=7000)
         self.sequences = smth.sequences_from_file()
         char_to_index = {v: i for i, v in enumerate((list(set(itertools.chain(*self.sequences)))))}
@@ -30,7 +30,7 @@ class BuildNeuralLSTM():
         self.test_begin, self.test_end = smth.split_list_of_seq_into_test_and_target(self.test)
         self.train_begin, self.train_end = smth.split_list_of_seq_into_test_and_target(self.train)
 
-    def _prepare_model(self):
+    def prepare_model(self):
         vocab_size = max(list(set(itertools.chain(*self.train)))) + 1
 
         self.model = Sequential([
@@ -41,17 +41,17 @@ class BuildNeuralLSTM():
 
         self.model.compile(loss='sparse_categorical_crossentropy', optimizer='rmsprop', metrics=['accuracy'])
 
-    def _fit_model(self):
+    def fit_model(self):
         self.model.fit(np.array(self.train_begin), np.array(self.train_end), batch_size=self.batch_size,
                        epochs=self.epochs)
 
-    def _predict_next_charpredict_(self, inp, num_of_pred=10):
+    def predict_next_charpredict_(self, inp, num_of_pred=10):
         arr = np.expand_dims(np.array(inp), axis=0)
         prediction = self.model.predict(arr)
         u = [[i for i in j] for j in prediction][0]
         return [self.index_to_char[i] for i in np.array(u).argsort()[-num_of_pred:][::-1]]
 
-    def _gain_results(self):
+    def gain_results(self):
         counter = 0
         for i in range(len(self.test_begin)):
             if self.index_to_char[self.test_end[i]] in self._predict_next_charpredict_(self.test_begin[i]):
