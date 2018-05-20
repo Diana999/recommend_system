@@ -1,3 +1,5 @@
+from collections import Counter
+
 from tqdm import tqdm
 
 from src.structures.prediction_tree import PredictionTree
@@ -39,7 +41,7 @@ class CPT:
 
         return True
 
-    def score(self, counttable, key, number_of_similar_sequences, number_items_counttable):
+    def score(self, counttable, key, number_of_similar_sequences, number_items_counttable, num=None, sims=None, elem_count=None):
 
         weight_level = 1 / number_of_similar_sequences
         weight_distance = 1 / number_items_counttable
@@ -54,18 +56,23 @@ class CPT:
 
     def predict(self, data, target, k, n):
         predictions = []
+        ttl = []
         for each_target in tqdm(target):
-            each_target = each_target[-int(len(each_target)*k):]
+            ttl.append(each_target)
+            each_target = each_target[-1:]
             intersection = set(range(0, len(data)))
             tries = []
             for element in each_target:
                 if self.II.get(element) is None:
                     continue
-                intersection = intersection & self.II.get(element)
+                #intersection = intersection & self.II.get(element)
                 tries += list(self.II.get(element))
             similar_sequences = []
-            # intersection = [i[0] for i in Counter(tries).most_common(int(len(tries)))] if len(tries) > 1 else tries
-            intersection = tries
+            if len(tries) > 1:
+                intersection = [i[0] for i in Counter(tries).most_common(int(len(tries)))]
+            else:
+                intersection = tries
+            # intersection = tries
 
             for element in intersection:
                 currentnode = self.LT.get(element)
@@ -91,13 +98,14 @@ class CPT:
                     for element in sequence[index + 1:]:
                         if element in each_target:
                             continue
-
-                        counttable = self.score(counttable, element, len(similar_sequences), count)
                         count += 1
+                        counttable = self.score(counttable, element, len(similar_sequences), count, ttl[-1],
+                                                similar_sequences, self.II.get(element))
+
             pred = self.get_n_largest(counttable, n)
             predictions.append(pred)
 
-        return predictions
+        return predictions, ttl
 
     def get_n_largest(self, dictionary, n):
         largest = sorted(dictionary.items(), key=lambda t: t[1], reverse=True)[:n]

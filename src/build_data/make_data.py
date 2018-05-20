@@ -13,11 +13,11 @@ class MakeData:
 
     def make_files(self):
         print('making files')
-        self.split_file_into_n_files('data/whole_data.txt', 1)
+        self.split_file_into_n_files('data/normal_whole_data.txt', 1)
 
     def sequences_from_file(self, file=None):
         if not file:
-            file = 'data/encoded_data_len_more_2.txt'
+            file = 'data/normal_whole_data.txt'
         with open(file, 'r') as f:
             for line in tqdm(f.readlines()):
                 self.sequences.append(line.split())
@@ -27,7 +27,7 @@ class MakeData:
             self.sequences = [seq for seq in self.sequences if len(seq) == self.length_of_seq_fixed]
         if self.num_of_seq:
             self.sequences = self.sequences[:self.num_of_seq]
-        self.sequences = [list(map(int, i)) for i in self.sequences]
+        #self.sequences = [list(map(int, i)) for i in self.sequences]
         # scaler = MinMaxScaler()
         # scaler.fit(self.sequences)
         # self.sequences = scaler.transform(self.sequences)
