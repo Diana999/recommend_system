@@ -1,3 +1,4 @@
+import math
 from collections import Counter
 
 from tqdm import tqdm
@@ -18,6 +19,7 @@ class CPT:
         self.LT = {}
 
     def train(self, data, train, merge=False):
+        print('trr')
         if merge:
             data += train
         cursornode = self.root
@@ -59,13 +61,13 @@ class CPT:
         ttl = []
         for each_target in tqdm(target):
             ttl.append(each_target)
-            each_target = each_target[-1:]
+            each_target = each_target[math.ceil(len(each_target)*k):]
             intersection = set(range(0, len(data)))
             tries = []
             for element in each_target:
                 if self.II.get(element) is None:
                     continue
-                #intersection = intersection & self.II.get(element)
+                intersection = intersection & self.II.get(element)
                 tries += list(self.II.get(element))
             similar_sequences = []
             if len(tries) > 1:

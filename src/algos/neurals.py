@@ -12,7 +12,7 @@ from build_data.make_data import MakeData
 
 class BuildNeuralLSTM():
     def __init__(self, length_of_seg=None, length_of_seq_fixed=6, num_of_seq=700, hidden_layers=512, batch_size=128,
-                 epochs=300):
+                 epochs=10):
         self.length_of_seg = length_of_seg
         self.length_of_seq_fixed = length_of_seq_fixed
         self.num_of_seq = num_of_seq
@@ -21,7 +21,7 @@ class BuildNeuralLSTM():
         self.epochs = epochs
 
     def make_data(self):
-        smth = MakeData(len_of_seq_fixed=6, num_of_seq=7000)
+        smth = MakeData(len_of_seq_fixed=self.length_of_seq_fixed, num_of_seq=self.num_of_seq)
         self.sequences = smth.sequences_from_file()
         char_to_index = {v: i for i, v in enumerate((list(set(itertools.chain(*self.sequences)))))}
         self.index_to_char = {i: v for i, v in enumerate((list(set(itertools.chain(*self.sequences)))))}
@@ -31,7 +31,7 @@ class BuildNeuralLSTM():
         self.train_begin, self.train_end = smth.split_list_of_seq_into_test_and_target(self.train)
 
     def prepare_model(self):
-        vocab_size = max(list(set(itertools.chain(*self.train)))) + 1
+        vocab_size = max(list(set(itertools.chain(*self.train)))) + 2
 
         self.model = Sequential([
             Embedding(vocab_size, len(self.test_begin), input_length=self.length_of_seq_fixed - 1),  # а так нужно?
@@ -54,6 +54,6 @@ class BuildNeuralLSTM():
     def gain_results(self):
         counter = 0
         for i in range(len(self.test_begin)):
-            if self.index_to_char[self.test_end[i]] in self._predict_next_charpredict_(self.test_begin[i]):
+            if self.index_to_char[self.test_end[i]] in self.predict_next_charpredict_(self.test_begin[i]):
                 counter += 1
         return counter / len(self.test_begin)

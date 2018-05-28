@@ -1,11 +1,8 @@
 from collections import Counter
 
-import pandas as pd
 from tqdm import tqdm
-
+import numpy as np
 from algos.cpt import CPT
-from build_data.genre import get_items_genre_dict, get_sequence_most_n_genre
-from build_data.make_data import MakeData
 from implemnts.cpt_original import CPTMakeData
 
 
@@ -13,7 +10,7 @@ class CPTFun(CPT):
     def __init__(self):
         super().__init__()
         self.items_genre = {}
-        sequences = CPTMakeData('a').sequences
+        sequences = CPTMakeData().sequences
         self.sequnce_genre = {}
         with open("/Users/dianagajnutdinova/PycharmProjects/untitled3/src/data/item_genre.txt", 'r') as f:
             for i in tqdm(f.readlines()):
@@ -24,7 +21,6 @@ class CPTFun(CPT):
                 if self.items_genre.get(item):
                     genres_list.append(self.items_genre[item])
             self.sequnce_genre[num] = [i[0] for i in Counter(genres_list).most_common(1)]
-        d = 1
 
     def score(self, counttable, key, number_of_similar_sequences, number_items_counttable, num=None, sims=None,
               elem_count=None):
@@ -38,7 +34,7 @@ class CPTFun(CPT):
                 score += 1
         else:
             score += 1
-        score += sims  + len(elem_count)
+        score += sims + len(elem_count)
 
         if counttable.get(key) is None:
             counttable[key] = score
@@ -47,27 +43,17 @@ class CPTFun(CPT):
         return counttable
 
 
-target = CPTMakeData(file='data/1_part.txt', num_of_seq=10000, length_of_seq_fixed=6)
+target = CPTMakeData()
 target_test_seq, test_seq, train_seq = target.make_sequences()
-# model = CPT()
-# model.train(train_seq, test_seq, merge=False)
-# predictions, ttl= model.predict(train_seq, test_seq, 0.2, 5)
-# supra = 0
-# print(len(target_test_seq))
-# for ia in range(len(target_test_seq)):
-#     if predictions[ia] and target_test_seq[ia] in predictions[ia]:
-#         supra += 1
-# with open('shows_txt', 'a') as f:
-#     f.write(str(supra / len(predictions)) + ' ' + str(supra))
-#
 model = CPTFun()
 model.train(train_seq, test_seq, merge=True)
-predictions, ttl = model.predict(train_seq, test_seq, 0.2, 10)
-supra = 0
-print(len(target_test_seq))
-for ia in range(len(target_test_seq)):
-    if predictions[ia] and target_test_seq[ia] in predictions[ia]:
-        supra += 1
-with open('shows_txt', 'a') as f:
-    f.write('\n')
-    f.write(str(supra / len(predictions)) + ' ' + str(supra))
+for i in np.arange(0.1, 1, 0.1):
+    predictions, ttl = model.predict(train_seq, test_seq, i, 10)
+    supra = 0
+    print(len(target_test_seq))
+    for ia in range(len(target_test_seq)):
+        if predictions[ia] and target_test_seq[ia] in predictions[ia]:
+            supra += 1
+    with open('shows_txt', 'a') as f:
+        f.write('\n')
+        f.write(str(supra / len(predictions)) + ' ' + str(supra) + str(i))

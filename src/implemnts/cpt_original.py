@@ -10,19 +10,19 @@ def split_list_of_seq_into_test_and_target(list_of_seq):
 
 
 class CPTMakeData:
-    def __init__(self, file, length_of_seq_fixed=None, len_of_seq=None, num_of_seq=None):
+    def __init__(self, length_of_seq_fixed=None, len_of_seq=None, num_of_seq=None):
         self.length_of_seq_fixed = length_of_seq_fixed
         self.len_of_seq = len_of_seq
         self.num_of_seq = num_of_seq
         self.sequences = []
-        self.read_file(file)
+        self.read_file()
 
-    def read_file(self, file):
-        with open('data/data_with_len_more_2.txt', 'r') as f:
+    def read_file(self, ):
+        with open('data/encoded_data_whole_normal_less_50.txt', 'r') as f:
             for line in tqdm(f.readlines()):
                 self.sequences.append(line.split())
         if self.len_of_seq:
-            self.sequences = [seq for seq in self.sequences if len(seq) > self.len_of_seq]
+            self.sequences = [seq for seq in self.sequences if len(seq) > 10 and len(seq) < 50]
         elif self.length_of_seq_fixed:
             self.sequences = [seq for seq in self.sequences if len(seq) == self.length_of_seq_fixed]
         if self.num_of_seq:
