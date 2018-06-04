@@ -1,6 +1,5 @@
 import os
 
-from sklearn.preprocessing import MinMaxScaler
 from tqdm import tqdm
 
 
@@ -27,10 +26,6 @@ class MakeData:
             self.sequences = [seq for seq in self.sequences if len(seq) == self.length_of_seq_fixed]
         if self.num_of_seq:
             self.sequences = self.sequences[:self.num_of_seq]
-        #self.sequences = [list(map(int, i)) for i in self.sequences]
-        # scaler = MinMaxScaler()
-        # scaler.fit(self.sequences)
-        # self.sequences = scaler.transform(self.sequences)
         return self.sequences
 
     def make_sequences(self):

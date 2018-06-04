@@ -1,8 +1,11 @@
+import itertools
 import math
+import random
 from collections import Counter
 
 from tqdm import tqdm
 
+from build_data.build_data import CPTMakeData
 from src.structures.prediction_tree import PredictionTree
 
 
@@ -43,7 +46,8 @@ class CPT:
 
         return True
 
-    def score(self, counttable, key, number_of_similar_sequences, number_items_counttable, num=None, sims=None, elem_count=None):
+    def score(self, counttable, key, number_of_similar_sequences, number_items_counttable, num=None, sims=None,
+              elem_count=None):
 
         weight_level = 1 / number_of_similar_sequences
         weight_distance = 1 / number_items_counttable
@@ -61,7 +65,7 @@ class CPT:
         ttl = []
         for each_target in tqdm(target):
             ttl.append(each_target)
-            each_target = each_target[math.ceil(len(each_target)*k):]
+            each_target = each_target[math.ceil(len(each_target) * k):]
             intersection = set(range(0, len(data)))
             tries = []
             for element in each_target:
@@ -112,3 +116,73 @@ class CPT:
     def get_n_largest(self, dictionary, n):
         largest = sorted(dictionary.items(), key=lambda t: t[1], reverse=True)[:n]
         return [key for key, _ in largest]
+
+
+class CPTDummy(CPT):
+    def predict(self, data, target, k, n):
+        predictions = []
+        ttl = []
+        for each_target in tqdm(target):
+            ttl.append(each_target)
+            each_target = each_target[math.ceil(len(each_target) * k):]
+            tries = []
+            for element in each_target:
+                if self.II.get(element) is None:
+                    continue
+                tries += list(self.II.get(element))
+            similar_sequences = []
+            if len(tries) > 1:
+                intersection = [i[0] for i in Counter(tries).most_common(int(len(tries)))]
+            else:
+                intersection = tries
+
+            for element in intersection:
+                currentnode = self.LT.get(element)
+                tmp = []
+                while currentnode.Item is not None:
+                    tmp.append(currentnode.Item)
+                    currentnode = currentnode.Parent
+                similar_sequences.append(tmp)
+
+            similar_sequences = list(set(itertools.chain(*similar_sequences)))
+
+            predictions.append([random.choice(similar_sequences if similar_sequences else [0]) for _ in range(n)])
+
+        return predictions, ttl
+
+
+class CPTFun(CPT):
+    def __init__(self):
+        super().__init__()
+        self.items_genre = {}
+        sequences = CPTMakeData().sequences
+        self.sequnce_genre = {}
+        with open("/Users/dianagajnutdinova/Codes/Python/PycharmProjects/untitled3/src/data/item_genre.txt", 'r') as f:
+            for i in tqdm(f.readlines()):
+                self.items_genre[i.split()[0]] = i.split()[1]
+        for num, seq in tqdm(enumerate(sequences)):
+            genres_list = []
+            for item in seq:
+                if self.items_genre.get(item):
+                    genres_list.append(self.items_genre[item])
+            self.sequnce_genre[num] = [i[0] for i in Counter(genres_list).most_common(1)]
+
+    def score(self, counttable, key, number_of_similar_sequences, number_items_counttable, num=None, sims=None,
+              elem_count=None):
+        sims = 1 / len([1 for i in sims if key in i])
+        score = 0
+        if self.items_genre.get(key):
+            if self.items_genre.get(key) in [i[0] for i in
+                                             Counter([self.items_genre.get(i, 0) for i in num]).most_common(1)]:
+                score *= score
+            else:
+                score *= score * 0.5
+        else:
+            score *= score * 0.5
+        score += sims * 0.5 + len(elem_count)
+
+        if counttable.get(key) is None:
+            counttable[key] = score
+        else:
+            counttable[key] = score + counttable.get(key)
+        return counttable
