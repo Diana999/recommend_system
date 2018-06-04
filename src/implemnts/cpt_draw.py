@@ -1,5 +1,5 @@
 from algos.cpt import CPT
-from implemnts.cpt_original import CPTMakeData
+from build_data.build_data import CPTMakeData
 
 for i in range(10000, 100000, 10000):
     target = CPTMakeData(num_of_seq=i)
