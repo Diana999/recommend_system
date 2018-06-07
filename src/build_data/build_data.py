@@ -43,5 +43,5 @@ class CPTMakeData:
     def make_sequences(self):
         print('we')
         train_seq, test_seq_begin = self.split_data_with_proportion(self.sequences, 0.9)
-        test_seq, self.target_test_seq = self.split_list_of_seq_into_test_and_target(test_seq_begin, 0.5)
+        test_seq, self.target_test_seq = self.split_list_of_seq_into_test_and_target(test_seq_begin, 0.8)
         return self.target_test_seq, test_seq, train_seq
