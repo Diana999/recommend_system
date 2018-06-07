@@ -16,9 +16,10 @@ class CPTMakeData:
         self.make_test_suffix_preffix()
 
     def read_file(self, ):
-        with open('data/encoded_data_whole_normal_less_50.txt', 'r') as f:
+        with open('data/normal_whole_data.txt', 'r') as f:
             for line in tqdm(f.readlines()):
-                self.sequences.append(line.split())
+                if 8 < len(line.split()) < 50:
+                    self.sequences.append(line.split())
         if self.len_of_seq:
             self.sequences = [seq for seq in self.sequences if len(seq) > 10 and len(seq) < 50]
         elif self.length_of_seq_fixed:

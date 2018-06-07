@@ -12,5 +12,5 @@ class MatrixMakeData(CPTMakeData):
         pass
 
     def make_cut_off(self):
-        self.test, self.train  = self.split_list_of_seq_into_test_and_target(self.sequences, 0.8)
+        self.test, self.train  = self.split_list_of_seq_into_test_and_target(self.sequences, 0.7)
         g = 0
