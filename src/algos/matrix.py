@@ -2,9 +2,10 @@ import itertools
 
 import numpy as np
 import pandas as pd
+from surprise.model_selection import train_test_split
 from tqdm import tqdm
 
-from implemnts.cpt_original import CPTMakeData
+from build_data.build_data import CPTMakeData
 
 
 class CreateUserBookMatrix():
@@ -13,7 +14,7 @@ class CreateUserBookMatrix():
         self._build_target()
 
     def _sequence_reader(self):
-        self.book_sequences = CPTMakeData('a', num_of_seq=5000).sequences
+        self.book_sequences = CPTMakeData().sequences
         self.num_users = len(self.book_sequences)
         print(self.num_users)
         self.unique_book_list = list(set(itertools.chain(*self.book_sequences)))
@@ -53,7 +54,7 @@ for i, user in enumerate(tqdm(matrix)):
     ratings += smth.flatten_weigths(len(smth.book_sequences[i]))
 from collections import defaultdict
 
-from surprise import SVD
+from surprise import SVD, accuracy
 from surprise import Dataset
 from surprise import Reader
 
@@ -79,13 +80,22 @@ reader = Reader(rating_scale=(0, 5))
 
 data = Dataset.load_from_df(df[['userID', 'itemID', 'rating']], reader)
 
-trainset = data.build_full_trainset()
+trainset, testset = train_test_split(data, test_size=.25)
 print("> Training...")
 algo = SVD()
 algo.train(trainset)
 print("> OK")
-testset = trainset.build_anti_testset()
 predictions = algo.test(testset)
 
 top_n = get_top_n(predictions, n=10)
 print("> OK")
+sim_options = {
+    'user_based': True  # compute  similarities between items
+}
+
+# Train the algorithm on the trainset, and predict ratings for the testset
+algo.fit(trainset)
+predictions = algo.test(testset)
+d = 1
+# Then compute RMSE
+accuracy.rmse(predictions)
