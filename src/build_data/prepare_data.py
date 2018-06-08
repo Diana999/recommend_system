@@ -1,5 +1,6 @@
 import itertools
 
+import pandas as pd
 from sklearn.preprocessing import LabelEncoder
 from tqdm import tqdm
 
