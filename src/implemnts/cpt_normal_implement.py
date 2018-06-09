@@ -1,7 +1,5 @@
-from algos.cpt import CPT
-from algos.cpt_dumy import CPTDummy
-from algos.cptfun import CPTFun
-from implemnts.cpt_original import CPTMakeData
+from algos.cpt import CPT, CPTDummy, CPTFun
+from build_data.build_data import CPTMakeData
 
 
 class GetCptResult:
@@ -23,7 +21,7 @@ class GetCptResult:
             self.model = CPTFun()  # или наоборт
 
     def bulild_data(self):
-        data = CPTMakeData(num_of_seq=1000)  # splitting in 80/20 test/targer
+        data = CPTMakeData()  # splitting in 80/20 test/targer
         self.test_preffix, self.test, self.train = data.make_sequences()
 
     def train_model(self, merge=True):
