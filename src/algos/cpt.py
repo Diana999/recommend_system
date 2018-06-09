@@ -47,7 +47,7 @@ class CPT:
         return True
 
     def score(self, counttable, key, number_of_similar_sequences, number_items_counttable, num=None, sims=None,
-              elem_count=None):
+              elem_count=None,a=None, b=None, c=None):
 
         weight_level = 1 / number_of_similar_sequences
         weight_distance = 1 / number_items_counttable
@@ -63,7 +63,7 @@ class CPT:
     def predict(self, data, target, k, n):
         predictions = []
         ttl = []
-        for each_target in tqdm(target):
+        for lenchik,each_target in tqdm(enumerate(target)):
             ttl.append(each_target)
             each_target = each_target[math.ceil(len(each_target) * k):]
             intersection = set(range(0, len(data)))
@@ -106,7 +106,7 @@ class CPT:
                             continue
                         count += 1
                         counttable = self.score(counttable, element, len(similar_sequences), count, ttl[-1],
-                                                similar_sequences, self.II.get(element))
+                                                similar_sequences, self.II.get(element), lenchik, len(data), len(target))
 
             pred = self.get_n_largest(counttable, n)
             predictions.append(pred)
@@ -168,12 +168,11 @@ class CPTFun(CPT):
             self.sequnce_genre[num] = [i[0] for i in Counter(genres_list).most_common(1)]
 
     def score(self, counttable, key, number_of_similar_sequences, number_items_counttable, num=None, sims=None,
-              elem_count=None):
+              elem_count=None, lenchik=None, len_data=None, len_target=None):
         sims = 1 / len([1 for i in sims if key in i])
         score = 0
         if self.items_genre.get(key):
-            if self.items_genre.get(key) in [i[0] for i in
-                                             Counter([self.items_genre.get(i, 0) for i in num]).most_common(1)]:
+            if self.items_genre.get(key) in self.sequnce_genre[51881 +lenchik]:
                 score *= score
             else:
                 score *= score * 0.5
